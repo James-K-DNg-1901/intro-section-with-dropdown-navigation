@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,700;1,500&display=swap');
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            almost_white: 'hsl(0, 0%, 98%)',
+            medium_gray: 'hsl(0, 0%, 41%)',
+            almost_black: 'hsl(0, 0%, 8%)'
+          },
+          spacing: {
+            body: '100vh'
+          }
+        },
+        fontFamily: {
+          epilogue: ['Epilogue','sans-serif'] 
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+<body class="min-h-body font-epiloque bg-lmost_white">
+  <header>
+    <div class="w-full text-4xl font-bold px-10 pt-4 pb-2 flex items-center gap-14">
+      snap
+      <div class="w-full text-sm text-medium_gray font-normal flex justify-between">
+        <div class="w-80 flex justify-between items-center relative">
+          <div id="features" class="hover:text-almost_black flex items-center gap-1 cursor-pointer">Features<img src="images/icon-arrow-down.svg" alt="icon-arrow"></div>
+          <div id="features-menu" class="w-36 py-5 pl-5 absolute top-12 -left-16 flex justify-start items-center rounded-xl shadow-2xl hidden">
+            <ul class="flex flex-col gap-3">
+              <li class="flex hover:font-bold"><img class="w-5 mr-4" src="./images/icon-todo.svg" alt="icon-todo"><a href="#">Todo List</a></li>
+              <li class="flex hover:font-bold"><img class="w-5 mr-4" src="./images/icon-calendar.svg" alt="icon-calendar"><a href="#">Calendar</a></li>
+              <li class="flex hover:font-bold"><img class="w-5 mr-4" src="./images/icon-reminders.svg" alt="icon-reminders"><a href="#">Reminders</a></li>
+              <li class="flex hover:font-bold"><img class="w-5 mr-4" src="./images/icon-planning.svg" alt="icon-planning"><a href="#">Planning</a></li>
+            </ul>
+          </div>
+          <div id="company" class="hover:text-black flex items-center gap-1 cursor-pointer">Company<img src="images/icon-arrow-down.svg" alt="icon-arrow"></div>
+          <div id="company-menu" class="w-28 py-5 pl-5 absolute top-12 right-28 flex justify-start items-center rounded-xl shadow-2xl hidden">
+            <ul class="flex flex-col gap-3">
+              <li class="flex hover:font-bold"><a href="#">History</a></li>
+              <li class="flex hover:font-bold"><a href="#">Our Team</a></li>
+              <li class="flex hover:font-bold"><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="hover:text-almost_black cursor-pointer">Careers</div>
+          <div class="hover:text-almost_black  cursor-pointer">About</div>
+        </div>
+        <div class="w-48 text-sm text-medium_gray font-normal flex justify-between items-center">
+          <div class="hover:text-black cursor-pointer">Login</div>
+          <div class="w-28 h-10 border-2 border-medium_gray rounded-xl flex items-center justify-center hover:text-black hover:border-almost_black cursor-pointer">Register</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="body">
+    <div class="w-full py-20 flex flex-row justify-center items-end gap-24">
+      <div class="w-2/5 p-2">
+        <h1 class="text-8xl font-bold mb-12">Make remote work</h1>
+        <p class="w-96 text-medium_gray tracking-wide mb-12">
+          Get your team in sync, no matter your location. Streamline processes, 
+          create team rituals, and watch productivity soar.
+        </p>
+        <div class="w-36 h-14 text-almost_white hover:text-almost_black border-2 border-black rounded-xl bg-almost_black hover:bg-almost_white flex items-center justify-center cursor-pointer">Learn more</div>
+        <div class="w-full flex justify-between item-end mt-24">
+          <img class="w-28 h-8" src="./images/client-databiz.svg" alt="logo-databiz">
+          <img class="w-20 h-10" src="./images/client-audiophile.svg" alt="logo-audiophile">
+          <img class="w-28 h-6" src="./images/client-meet.svg" alt="logo-meet">
+          <img class="w-24 h-6" src="./images/client-maker.svg" alt="logo-maker">
+        </div>
+      </div>
+      <div class="w-1/3">
+        <img src="./images/image-hero-desktop.png" alt="">
+      </div>
+    </div>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>r
